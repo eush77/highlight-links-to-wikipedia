@@ -7,7 +7,7 @@
 // ==/UserScript==
 
 !function(SCALE) {
-    var urlMatcher = /https?:\/\/([^.\/]+\.)?wikipedia.org\/wiki\//;
+    var urlMatcher = /https?:\/\/([^.\/]+\.)?wikipedia\.org\/wiki\//;
     var logo = (function() {
         var template = document.createElement('img');
         template.src = 'http://wikipedia.org/favicon.ico';
