@@ -4,4 +4,4 @@ Append small Wikipedia logos to links which lead to Wikipedia articles. Logos ar
 
 ![](sample.png)
 
-Links on Wikipedia itself are not involved.
+Links on Wikipedia itself are not involved, as well as ones containing images & other non-plain-text elements.

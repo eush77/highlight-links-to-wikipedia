@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Highlight Links to Wikipedia
-// @version     0.3
+// @version     0.4
 // @description Append small Wikipedia logos to links which lead to Wikipedia articles.
 // @include     *
 // @exclude     *://*wikipedia.org/*
@@ -22,7 +22,8 @@
         };
     }());
     [].slice.call(document.querySelectorAll('a[href*="wikipedia.org/wiki/"]')).forEach(function(a) {
-        if (urlMatcher.test(a.href)) {
+        // Skip non-plain-text links (e.g. images), perform complete URL check
+        if (!a.childElementCount && urlMatcher.test(a.href)) {
             var em = parseInt(window.getComputedStyle(a).fontSize);
             a.parentNode.insertBefore(logo(em), a.nextSibling);
         }
